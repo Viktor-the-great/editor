@@ -38,6 +38,7 @@ export default class App extends Component {
   onSelectChange = (select_value) => {
     this.setState({
       select_value,
+      value: select_value.text,
     }, () => {
       this._editor.setValue(select_value.text)
     })
@@ -59,6 +60,9 @@ export default class App extends Component {
             value={ this.state.value }
             onChange={ this.onChange }
           />
+        </div>
+        <div className={ styles.marginTop }>
+          { this.state.value }
         </div>
       </div>
     )
