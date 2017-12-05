@@ -1,0 +1,9 @@
+.container {
+  margin: 30px;
+}
+
+.marginTop {
+  + .marginTop {
+    margin-top: 10px;
+  }
+}
